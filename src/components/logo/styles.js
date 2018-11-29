@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../assets/colors';
 
 const fontSize = '4rem';
+const fontSizeMobile = '2rem';
 
 export const Wrapper = styled.section`
 display: flex;
@@ -19,7 +20,7 @@ font-size: ${fontSize}
 color: ${colors.primary}
 
 @media only screen and (max-width: 768px){
-  font-size: 2rem;
+  font-size: ${fontSizeMobile}
 }
 `;
 
