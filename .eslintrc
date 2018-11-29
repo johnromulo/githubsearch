@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["import", "react", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "spread": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "settings": {
+    "react": {
+      "version": "16.6.3"
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-max-props-per-line": [
+      "error",
+      {
+        "maximum": 3
+      }
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "prefer-template": "error",
+    "no-var": "error"
+  }
+}
