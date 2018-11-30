@@ -12,6 +12,7 @@ import {
 } from './styles';
 import Logo from '../logo/';
 import RepositoryInfo from '../repository-info/'
+import UserDetail from '../user-detail';
 import SearchIcon from '../../assets/icons/search.svg';
 
 class Result extends Component {
@@ -30,7 +31,9 @@ class Result extends Component {
           </WrapperSearch>
         </Header>
         <Content>
-          <SectionDatail></SectionDatail>
+          <SectionDatail>
+            <UserDetail />
+          </SectionDatail>
           <SectionListRepo>
             <RepositoryInfo />
           </SectionListRepo>

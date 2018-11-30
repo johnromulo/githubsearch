@@ -42,9 +42,7 @@ export const Content = styled.div`
   }
 `
 export const SectionDatail = styled.section`
-  background-color: red;
   width: 280px;
-  height: 30px;
   margin-right:4.5em;
   @media only screen and (max-width: 768px){
     width: 100%;
