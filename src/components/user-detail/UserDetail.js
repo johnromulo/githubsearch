@@ -41,7 +41,7 @@ const UserDetail = (props) => {
 
 
 UserDetail.propTypes = {
-  fontSize: PropTypes.string,
+  user: PropTypes.object,
 };
 
 export default UserDetail;

@@ -4,12 +4,23 @@ import Logo from '../logo/';
 import Search from '../search/';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: '',
+    }
+  }
+
+  handleResult = () => {
+    this.props.history.push('/result');
+  }
+
   render() {
     return (
       <Wrapper>
         <Logo />
         <Content>
-          <Search />
+          <Search onClick={() => this.handleResult()} />
         </Content>
       </Wrapper>
     );

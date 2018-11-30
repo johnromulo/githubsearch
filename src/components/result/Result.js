@@ -16,6 +16,12 @@ import UserDetail from '../user-detail';
 import SearchIcon from '../../assets/icons/search.svg';
 
 class Result extends Component {
+
+  componentDidMount() {
+    const userName = this.props.match.params.filter;
+    this.props.actionGetUser(userName);
+  }
+
   render() {
     return (
       <Wrapper>
