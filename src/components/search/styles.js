@@ -5,9 +5,8 @@ export const Wrapper = styled.section`
 display: flex;
 flex-direction: row;
 align-items: center;
-width: 100%;
-justify-content: center;
-margin-bottom: 8em;
+width: ${props => props.widthWrapper || '100%'};
+justify-content: ${props => props.justifyContent || 'center'};
 `;
 
 export const Input = styled.input`
@@ -16,7 +15,7 @@ padding: 0.5em;
 border: none;
 border-radius: 1px;
 box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-width: 60%;
+width: ${props => props.widthInput || '60%'} ;
 height: 20px;
 font-family: Raleway;
 font-size: 20px;

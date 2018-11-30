@@ -7,6 +7,11 @@ flex-direction: column;
 justify-content: center
 align-items: center;
 background-color: ${colors.backgrond_primary}
-width: 100%
-height: 100vh
+width: 100%;
+height: 100vh;
 `;
+
+export const Content = styled.section`
+margin-bottom: 8em;
+width: 100%
+`

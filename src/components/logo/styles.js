@@ -10,13 +10,13 @@ flex-direction: row;
 align-items: center;
 background-color: ${colors.light}
 width: fit-content;
-margin: 0.5em;
+margin: ${props => props.margin || '0.5em'} ;
+font-size: ${props => props.fontSize || fontSize}
 `;
 
 export const TextGit = styled.section`
 display: inline-block;
 font-family: 'Monaco', sans-serif;
-font-size: ${fontSize}
 color: ${colors.primary}
 
 @media only screen and (max-width: 768px){

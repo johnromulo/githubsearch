@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Wrapper } from './styles';
-import Logo from '../logo/Logo';
-import Search from '../search/Search';
+import { Wrapper, Content } from './styles';
+import Logo from '../logo/';
+import Search from '../search/';
 
 class Home extends Component {
   render() {
     return (
       <Wrapper>
         <Logo />
-        <Search />
+        <Content>
+          <Search />
+        </Content>
       </Wrapper>
     );
   }
