@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { colors } from '../../assets/colors';
+import { colors } from '../../utils/style-global/';
 
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center
 align-items: center;
-background-color: ${colors.backgrond_primary}
+background-color: ${colors.light}
 width: 100%;
 height: 100vh;
 `;

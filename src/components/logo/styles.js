@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../assets/colors';
+import { colors } from '../../utils/style-global/';
 
 const fontSize = '4rem';
 const fontSizeMobile = '2rem';
@@ -17,7 +17,7 @@ font-size: ${props => props.fontSize || fontSize}
 export const TextGit = styled.section`
 display: inline-block;
 font-family: 'Monaco', sans-serif;
-color: ${colors.primary}
+color: ${colors.dark}
 
 @media only screen and (max-width: 768px){
   font-size: ${fontSizeMobile}
