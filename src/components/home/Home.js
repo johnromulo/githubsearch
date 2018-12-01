@@ -12,7 +12,13 @@ class Home extends Component {
   }
 
   handleResult = () => {
-    this.props.history.push('/result');
+    this.props.history.push(`/${this.state.userName}`);
+  }
+
+  onChangeInput = (event) => {
+    this.setState(
+      { userName: event.target.value }
+    )
   }
 
   render() {
@@ -20,7 +26,7 @@ class Home extends Component {
       <Wrapper>
         <Logo />
         <Content>
-          <Search onClick={() => this.handleResult()} />
+          <Search value={this.state.userName} onChange={this.onChangeInput.bind(this)} onClick={this.handleResult.bind(this)} />
         </Content>
       </Wrapper>
     );

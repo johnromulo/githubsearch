@@ -6,21 +6,21 @@ function* getUser(action) {
   try {
     yield put({ type: 'GIT_REQUEST_USER' });
     const user = yield call(GitService.getUserFromServer, action.userName);
-    console.log('user', user);
-    yield put({ type: 'GIT_SUCCESS_USER', user: user.data });
+    console.log('user', user.data);
+    yield put({ type: 'GIT_SUCCESS_USER', data: user.data });
   } catch (err) {
-    yield put({ type: 'GIT_REQUEST_USER' });
+    yield put({ type: 'GIT_FAILURE_USER' });
   }
 }
 
 function* getUserRepos(action) {
   try {
-    yield put({ type: 'GIT_REQUEST_USER' });
-    const user = yield call(GitService.getUserFromServer, action.userName);
-    console.log('user', user);
-    yield put({ type: 'GIT_SUCCESS_USER', user: user.data });
+    yield put({ type: 'GIT_REQUEST_USER_REPOS' });
+    const repos = yield call(GitService.getUserReposFromServer, action.userName);
+    console.log('repos', repos.data);
+    yield put({ type: 'GIT_SUCCESS_USER_REPOS', data: repos.data });
   } catch (err) {
-    yield put({ type: 'GIT_REQUEST_USER' });
+    yield put({ type: 'GIT_FAILURE_USER_REPOS' });
   }
 }
 

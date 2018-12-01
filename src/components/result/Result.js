@@ -8,7 +8,8 @@ import {
   Input,
   Button,
   Img,
-  LogoContent
+  LogoContent,
+  NotFound
 } from './styles';
 import Logo from '../logo/';
 import RepositoryInfo from '../repository-info/'
@@ -20,9 +21,12 @@ class Result extends Component {
   componentDidMount() {
     const userName = this.props.match.params.filter;
     this.props.actionGetUser(userName);
+    this.props.actionGetUserRepos(userName);
   }
 
   render() {
+
+    console.log('strore', this.props.store)
     return (
       <Wrapper>
         <Header>
@@ -36,14 +40,24 @@ class Result extends Component {
             </Button>
           </WrapperSearch>
         </Header>
-        <Content>
-          <SectionDatail>
-            <UserDetail />
-          </SectionDatail>
-          <SectionListRepo>
-            <RepositoryInfo />
-          </SectionListRepo>
-        </Content>
+        {
+          !this.props.store.loading ?
+            this.props.store.error ?
+              <Content>
+                <NotFound> User not found :(</NotFound>
+              </Content>
+              :
+              <Content>
+                <SectionDatail>
+                  <UserDetail user={this.props.store.user} />
+                </SectionDatail>
+                <SectionListRepo>
+                  {
+                    this.props.store.repos.map((repo, index) => <RepositoryInfo key={index} repository={repo} />)
+                  }
+                </SectionListRepo>
+              </Content> : null
+        }
       </Wrapper>
     )
   };

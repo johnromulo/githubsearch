@@ -7,33 +7,31 @@ import RepositorieIcon from '../../assets/icons/repositorie.svg';
 import FollowersIcon from '../../assets/icons/followers.svg';
 import PropTypes from 'prop-types';
 
-const UserDetail = (props) => {
+const UserDetail = ({ user }) => {
   return (
     <Wrapper>
-      <Avatar src={'http://www.caferadioativo.com/wp-content/uploads/2014/02/dath-vader.jpg'} alt="avatar" />
-      <UserName>
-        Darth Vader
-      </UserName>
-      <UserLogin>anakinskywalker</UserLogin>
+      <Avatar src={user.avatar_url} alt="avatar" />
+      <UserName>{user.name}</UserName>
+      <UserLogin>{user.login}</UserLogin>
       <ContentInfo>
         <ImgInfo src={OrganizationIcon} alt='location' />
-        <InfoDescription>The Galactic Empire</InfoDescription>
+        <InfoDescription>{user.company}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={LocationnIcon} alt='location' />
-        <InfoDescription>Tatooine</InfoDescription>
+        <InfoDescription>{user.location}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={StarIcon} alt='location' />
-        <InfoDescription>1.000.000</InfoDescription>
+        <InfoDescription>{user.star_all_repos}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={RepositorieIcon} alt='location' />
-        <InfoDescription>4</InfoDescription>
+        <InfoDescription>{user.public_repos}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={FollowersIcon} alt='location' />
-        <InfoDescription>9.999.999</InfoDescription>
+        <InfoDescription>{user.followers}</InfoDescription>
       </ContentInfo>
     </Wrapper>
   );

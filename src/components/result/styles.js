@@ -41,6 +41,18 @@ export const Content = styled.div`
     flex-direction: column;
   }
 `
+export const NotFound = styled.label`
+  color: ${colors.secodary};
+
+  font-family: Raleway;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 2em auto;
+`
+
 export const SectionDatail = styled.section`
   width: 280px;
   margin-right:4.5em;

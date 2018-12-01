@@ -3,16 +3,16 @@ import { Wrapper, Title, Description, StarNumber, ContentStar, Img } from './sty
 import PropTypes from 'prop-types';
 import StarIcon from '../../assets/icons/star.svg';
 
-const RepositoryInfo = (props) => {
+const RepositoryInfo = ({ repository }) => {
   return (
     <Wrapper>
-      <Title>Death Star</Title>
+      <Title>{repository.name}</Title>
       <Description>
-        The most powerful weapon in the universe.
+        {repository.descripition}
       </Description>
       <ContentStar>
         <Img src={StarIcon} alt="logo" />
-        <StarNumber>4200</StarNumber>
+        <StarNumber>{repository.stargazers_count}</StarNumber>
       </ContentStar>
     </Wrapper>
   );

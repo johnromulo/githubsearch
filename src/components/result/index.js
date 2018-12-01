@@ -4,7 +4,7 @@ import Resul from './Result';
 import * as actions from '../../store/actions/gitActions';
 
 const mapStateToProps = state => ({
-  user: state.user
+  store: state.gitReducer,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
