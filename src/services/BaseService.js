@@ -6,7 +6,7 @@ export class BaseService {
 
   static axeioConfig() {
     return Axios.create({
-      baseURL: env.base_url,
+      baseURL: env.BASE_URL,
       crossDomain: true,
     });
   }

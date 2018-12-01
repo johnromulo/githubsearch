@@ -39,7 +39,7 @@ const UserDetail = ({ user }) => {
 
 
 UserDetail.propTypes = {
-  user: PropTypes.object,
+  user: PropTypes.object.isRequired,
 };
 
 export default UserDetail;

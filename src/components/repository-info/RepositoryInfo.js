@@ -17,7 +17,7 @@ const RepositoryInfo = ({ repository }) => {
 };
 
 RepositoryInfo.propTypes = {
-  repository: PropTypes.object,
+  repository: PropTypes.object.isRequired,
 };
 
 export default RepositoryInfo;
