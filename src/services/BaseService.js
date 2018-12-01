@@ -11,9 +11,7 @@ export class BaseService {
   static get(endpoint, params) {
     return new Promise((resolve, reject) => {
       Axios.get(`https://api.github.com/${endpoint}`, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
+        crossDomain: true,
         params: params
       })
         .then(response => {
