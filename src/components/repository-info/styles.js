@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  margin-bottom: 1em;
 `
 
 export const Title = styled.label`

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Wrapper, Content } from './styles';
+import { Wrapper, ContentSearch, ContentLogo } from './styles';
 import Logo from '../logo/';
 import Search from '../search/';
 
@@ -24,10 +24,15 @@ class Home extends Component {
   render() {
     return (
       <Wrapper>
-        <Logo />
-        <Content>
-          <Search value={this.state.userName} onChange={this.onChangeInput.bind(this)} onClick={this.handleResult.bind(this)} />
-        </Content>
+        <ContentLogo>
+          <Logo />
+        </ContentLogo>
+        <ContentSearch>
+          <Search
+            value={this.state.userName}
+            onChange={this.onChangeInput.bind(this)}
+            onClick={this.handleResult.bind(this)} />
+        </ContentSearch>
       </Wrapper>
     );
   }

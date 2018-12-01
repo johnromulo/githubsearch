@@ -7,9 +7,7 @@ const RepositoryInfo = ({ repository }) => {
   return (
     <Wrapper>
       <Title>{repository.name}</Title>
-      <Description>
-        {repository.descripition}
-      </Description>
+      <Description>{repository.descripition ? repository.descripition : 'No descripton'}</Description>
       <ContentStar>
         <Img src={StarIcon} alt="logo" />
         <StarNumber>{repository.stargazers_count}</StarNumber>

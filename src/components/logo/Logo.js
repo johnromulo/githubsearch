@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Logo = (props) => {
   return (
-    <Wrapper fontSize={props.fontSize} margin={props.margin}>
+    <Wrapper fontSize={props.fontSize} >
       <TextGit>Github</TextGit>
       <TextSearch>Search</TextSearch>
     </Wrapper>

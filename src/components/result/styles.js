@@ -17,6 +17,7 @@ export const Header = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 3em;
 
   @media only screen and (max-width: 768px){
     flex-direction: column;

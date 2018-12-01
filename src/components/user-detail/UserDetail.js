@@ -15,23 +15,23 @@ const UserDetail = ({ user }) => {
       <UserLogin>{user.login}</UserLogin>
       <ContentInfo>
         <ImgInfo src={OrganizationIcon} alt='location' />
-        <InfoDescription>{user.company}</InfoDescription>
+        <InfoDescription>{user.company ? user.company : 'no company'}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={LocationnIcon} alt='location' />
-        <InfoDescription>{user.location}</InfoDescription>
+        <InfoDescription>{user.location ? user.location : 'no location'}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={StarIcon} alt='location' />
-        <InfoDescription>{user.star_all_repos}</InfoDescription>
+        <InfoDescription>{user.star_all_repos ? user.star_all_repos : 0}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={RepositorieIcon} alt='location' />
-        <InfoDescription>{user.public_repos}</InfoDescription>
+        <InfoDescription>{user.public_repos ? user.public_repos : 0}</InfoDescription>
       </ContentInfo>
       <ContentInfo>
         <ImgInfo src={FollowersIcon} alt='location' />
-        <InfoDescription>{user.followers}</InfoDescription>
+        <InfoDescription>{user.followers ? user.followers : 0}</InfoDescription>
       </ContentInfo>
     </Wrapper>
   );

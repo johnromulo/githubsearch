@@ -11,6 +11,8 @@ export const Wrapper = styled.div`
 export const Avatar = styled.img`
   object-fit: cover;
   height: 280px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
 `
 
 export const UserName = styled.label`
@@ -21,6 +23,7 @@ export const UserName = styled.label`
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
+  margin: 0.3em 0;
 `
 
 export const UserLogin = styled.label`
@@ -50,7 +53,7 @@ export const ContentInfo = styled.section`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  margin: 0.5em;
+  margin: 0.2em 0;
 `
 
 export const ImgInfo = styled.img`
