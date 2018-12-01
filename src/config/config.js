@@ -1,3 +1,3 @@
-{
-  base_url: process.env.API_GIT_ENDPOINT
+export default {
+  base_url: process.env.REACT_APP_API_GIT_ENDPOINT
 }

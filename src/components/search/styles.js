@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/style-global/';
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.form`
   display: flex;
   width: 100%;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);

@@ -27,7 +27,8 @@ class Result extends Component {
     this.loadUserInfo(userName);
   }
 
-  handleResult = () => {
+  handleResult = (event) => {
+    event.preventDefault();
     this.props.history.push(`/${this.state.userName}`);
   }
 
@@ -60,7 +61,7 @@ class Result extends Component {
             <Search
               value={this.state.userName}
               onChange={this.onChangeInput.bind(this)}
-              onClick={this.handleResult.bind(this)} />
+              handleSearch={this.handleResult.bind(this)} />
           </WrapperSearch>
         </Header>
         {

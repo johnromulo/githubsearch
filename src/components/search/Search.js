@@ -3,11 +3,11 @@ import { Wrapper, Input, Button, Img } from './styles';
 import SearchIcon from '../../assets/icons/search.svg';
 import PropTypes from 'prop-types';
 
-const Search = ({ onClick, value, onChange }) => {
+const Search = ({ handleSearch, value, onChange }) => {
   return (
-    <Wrapper>
+    <Wrapper onSubmit={handleSearch}>
       <Input value={value} onChange={onChange} type="text" />
-      <Button onClick={onClick}>
+      <Button onClick={handleSearch} type="submit">
         <Img src={SearchIcon} alt="logo" />
       </Button>
     </Wrapper>
@@ -15,7 +15,7 @@ const Search = ({ onClick, value, onChange }) => {
 };
 
 Search.propTypes = {
-  onClick: PropTypes.func,
+  handleSearch: PropTypes.func,
   value: PropTypes.string,
   onChange: PropTypes.func
 };

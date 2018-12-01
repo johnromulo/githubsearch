@@ -52,7 +52,7 @@ export const ContentInfo = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   margin: 0.2em 0;
 `
 

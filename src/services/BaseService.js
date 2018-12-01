@@ -1,8 +1,15 @@
 import Axios from 'axios';
-//import { env } from '../config';
+import env from '../config';
 
 
 export class BaseService {
+
+  static axeioConfig() {
+    return Axios.create({
+      baseURL: env.base_url,
+      crossDomain: true,
+    });
+  }
 
   static post() {
 
@@ -10,8 +17,8 @@ export class BaseService {
 
   static get(endpoint, params) {
     return new Promise((resolve, reject) => {
-      Axios.get(`https://api.github.com/${endpoint}`, {
-        crossDomain: true,
+      const axios = this.axeioConfig();
+      axios.get(endpoint, {
         params: params
       })
         .then(response => {
