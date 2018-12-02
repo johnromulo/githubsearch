@@ -17,8 +17,9 @@ export class BaseService {
 
   static get(endpoint, params) {
     return new Promise((resolve, reject) => {
-      const axios = this.axeioConfig();
-      axios.get(endpoint, {
+      //   const axios = this.axeioConfig();
+      Axios.get(`${env.BASE_URL}${endpoint}`, {
+        crossDomain: true,
         params: params
       })
         .then(response => {
