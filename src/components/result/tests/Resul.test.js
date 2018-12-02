@@ -16,7 +16,7 @@ describe('Result tests', () => {
       gitReducer: {
         user: {},
         repos: [],
-        loading: true,
+        loading: false,
         erros: true,
       }
     }

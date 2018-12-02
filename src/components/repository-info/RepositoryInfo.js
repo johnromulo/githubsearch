@@ -6,11 +6,11 @@ import StarIcon from '../../assets/icons/star.svg';
 const RepositoryInfo = ({ repository }) => {
   return (
     <Wrapper>
-      <Title>{repository.name}</Title>
-      <Description>{repository.descripition ? repository.descripition : 'No descripton'}</Description>
+      <Title id="title">{repository.name}</Title>
+      <Description id="description">{repository.descripition ? repository.descripition : 'No descripton'}</Description>
       <ContentStar>
         <Img src={StarIcon} alt="logo" />
-        <StarNumber>{repository.stargazers_count}</StarNumber>
+        <StarNumber id="starcount">{repository.stargazers_count}</StarNumber>
       </ContentStar>
     </Wrapper>
   );

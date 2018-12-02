@@ -52,7 +52,7 @@ class Result extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Wrapper id="wrapper">
         <Header>
           <LogoContent>
             <Logo fontSize={'2.58rem'} />
@@ -67,8 +67,8 @@ class Result extends Component {
         {
           !this.props.store.loading ?
             this.props.store.error ?
-              <Content>
-                <NotFound> User not found :(</NotFound>
+              <Content id="contenNoFound">
+                <NotFound id="notFound"> User not found :(</NotFound>
               </Content>
               :
               <Content>
