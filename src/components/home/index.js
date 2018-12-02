@@ -4,7 +4,7 @@ import Home from './Home';
 import * as actions from '../../store/actions/gitActions';
 
 const mapStateToProps = state => ({
-  user: state.user
+  git: state.gitReducer,
 });
 
 

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 const Search = ({ handleSearch, value, onChange }) => {
   return (
-    <Wrapper onSubmit={handleSearch}>
-      <Input value={value} onChange={onChange} type="text" />
-      <Button onClick={handleSearch} type="submit">
+    <Wrapper id="formUsername" onSubmit={handleSearch}>
+      <Input id="inputUserName" value={value} onChange={onChange} type="text" />
+      <Button id="buttonSearch" onClick={handleSearch} type="submit">
         <Img src={SearchIcon} alt="logo" />
       </Button>
     </Wrapper>

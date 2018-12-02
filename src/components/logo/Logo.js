@@ -2,11 +2,11 @@ import React from 'react';
 import { TextGit, TextSearch, Wrapper } from './styles';
 import PropTypes from 'prop-types';
 
-const Logo = (props) => {
+const Logo = ({ fontSize }) => {
   return (
-    <Wrapper fontSize={props.fontSize} >
-      <TextGit>Github</TextGit>
-      <TextSearch>Search</TextSearch>
+    <Wrapper fontSize={fontSize} >
+      <TextGit id="textGit">Github</TextGit>
+      <TextSearch id="textSearch">Search</TextSearch>
     </Wrapper>
   );
 };

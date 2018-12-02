@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   erros: false
 }
 
-export default (state = INITIAL_STATE, action) => {
+export const gitReducer = (state = INITIAL_STATE, action) => {
 
   switch (action.type) {
     case env.GIT_SUCCESS_USER:

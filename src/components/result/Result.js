@@ -80,7 +80,9 @@ class Result extends Component {
                     this.props.store.repos.map((repo, index) => <RepositoryInfo key={index} repository={repo} />)
                   }
                 </SectionListRepo>
-              </Content> : null
+              </Content>
+            :
+            null
         }
       </Wrapper>
     )
