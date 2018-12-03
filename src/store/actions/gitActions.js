@@ -1,5 +1,6 @@
 import env from '../../config';
 
+// Ações de redux.
 export function actionGetUser(userName) {
   return { type: env.GET_USER, userName };
 }

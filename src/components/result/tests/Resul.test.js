@@ -8,7 +8,7 @@ import Result from '../index';
 describe('Result tests', () => {
 
   let wrapper, store, match;
-
+ // definição do estado  inicial do componente.
   beforeEach(() => {
     const mockStore = configureStore();
 
@@ -29,6 +29,7 @@ describe('Result tests', () => {
   });
 
 
+  // teste de renderização do Logo component.
   test('render Logo', () => {
     const resul = wrapper.find('Result').dive();
     expect(resul.find('Logo')).toHaveLength(1);
@@ -36,6 +37,8 @@ describe('Result tests', () => {
     expect(logo.text()).toBe('GithubSearch');
   });
 
+
+  // teste de renderização  do Search componet.
   test('render Search', () => {
     const resul = wrapper.find('Result').dive()
     expect(resul.find('Search')).toHaveLength(1);

@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   erros: false
 }
 
+// Gerenciador de estado Git (Usuarios  e repositórios)
 export const gitReducer = (state = INITIAL_STATE, action) => {
 
   switch (action.type) {

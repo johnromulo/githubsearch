@@ -2,6 +2,7 @@ import { takeLatest, put, call, all } from 'redux-saga/effects';
 import { GitService } from '../../services/GitService';
 import env from '../../config';
 
+// função reponsavel por ações de chamadas de busca de usuários
 function* getUser(action) {
   try {
     yield put({ type: env.GIT_REQUEST_USER });
@@ -12,6 +13,7 @@ function* getUser(action) {
   }
 }
 
+// função reponsavel por ações de chamadas de busca de repositório
 function* getUserRepos(action) {
   try {
     yield put({ type: env.GIT_REQUEST_USER_REPOS });
@@ -22,6 +24,7 @@ function* getUserRepos(action) {
   }
 }
 
+// interceptador de açoes
 export default function* root() {
   yield all([
     takeLatest(env.GET_USER, getUser),

@@ -5,6 +5,7 @@ import gitSaga from './sagas/gitSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 
+// defidindo middleware para o redux.
 const store = createStore(
     reducers,
     applyMiddleware(sagaMiddleware)
