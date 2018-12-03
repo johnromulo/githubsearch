@@ -22,7 +22,7 @@ export const TextGit = styled.section`
 
 export const TextSearch = styled(TextGit)`
   display: inline-block;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway-ExtraLightItalic', sans-serif;
   font-weight: 200;
   font-style: italic;
   margin-left: 0.1em;

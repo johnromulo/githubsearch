@@ -17,5 +17,19 @@ code {
   font-family: 'Monaco';
   font-style: normal;
   font-weight: normal;
-  src: local('Monaco'), url('./assets/fonts/Monaco/Monaco.woff') format('woff');
-  }
+  src: local('Monaco'), url('./assets/fonts/Monaco/Monaco.woff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway-ExtraLightItalic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway-ExtraLightItalic'), url('./assets/fonts/Raleway/Raleway-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway'), url('./assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+}
