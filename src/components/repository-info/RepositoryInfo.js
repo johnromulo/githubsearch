@@ -1,6 +1,6 @@
 import React from 'react';
-import { Wrapper, Title, Description, StarNumber, ContentStar, Img } from './styles';
 import PropTypes from 'prop-types';
+import { Wrapper, Title, Description, StarNumber, ContentStar, Img } from './styles';
 import StarIcon from '../../assets/icons/star.svg';
 
 const RepositoryInfo = ({ repository }) => {

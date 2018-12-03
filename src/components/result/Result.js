@@ -6,12 +6,12 @@ import {
   SectionListRepo,
   WrapperSearch,
   LogoContent,
-  NotFound
 } from './styles';
 import Logo from '../logo/';
 import RepositoryInfo from '../repository-info/'
 import UserDetail from '../user-detail';
 import Search from '../search';
+import NotFound from '../notfound';
 
 class Result extends Component {
 
@@ -67,9 +67,7 @@ class Result extends Component {
         {
           !this.props.store.loading ?
             this.props.store.error ?
-              <Content id="contenNoFound">
-                <NotFound id="notFound"> User not found :(</NotFound>
-              </Content>
+              <NotFound text={'User not found :('}/>
               :
               <Content>
                 <SectionDatail>
