@@ -5,7 +5,7 @@ import { Content, TextNotFound } from './styles';
 const NotFound = ({text}) => {
   return (
     <Content>
-      <TextNotFound>{text}</TextNotFound>
+      <TextNotFound id="textNotfound">{text}</TextNotFound>
     </Content>
   );
 };
