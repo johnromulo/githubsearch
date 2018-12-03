@@ -1,6 +1,6 @@
 
 
-## GitSearch
+## GithubSearch
 
 Aplicação client-side, que consulte a API do GitHub e mostre os repositórios de um determinado usuário.
 
@@ -16,6 +16,7 @@ Aplicação client-side, que consulte a API do GitHub e mostre os repositórios 
 ### `Endpoints`
 
 Detalhes de um usuário: [https://api.github.com/users/{username}](https://api.github.com/users/{username})
+
 Repositórios de um usuário: [https://api.github.com/users/{username}/repos](https://api.github.com/users/{username/repos)
 
 ### `Construção do projeto`
