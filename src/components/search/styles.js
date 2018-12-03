@@ -25,6 +25,9 @@ export const Input = styled.input`
   @media only screen and (max-width: 768px){
     height: 15px;
   }
+  &:focus{
+    outline: ${colors.light} auto 5px;
+  }
 `;
 
 export const Button = styled.button`
@@ -39,9 +42,48 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   @media only screen and (max-width: 768px){
     height: 37px;
+  }
+
+  &:hover {
+    background-color: ${colors.secodaryDark}
+  }
+
+  &:after {
+    content: '';
+    background-color: ${colors.secodary};
+    border-radius: 3px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0.001, 0.001);
+    opacity: 0.7;
+  }
+  &:active:after {
+    animation: effect 0.2s ease-out;
+  }
+  &:focus {
+    outline: 0;
+  }
+  @keyframes effect {
+    50% {
+      transform: scale(3.5, 3.5);
+      opacity: 0;
+    }
+    99% {
+      transform: scale(0.001, 0.001);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.001, 0.001);
+      opacity: 0.7;
+    }
   }
 `;
 

@@ -3,4 +3,5 @@ export const colors = {
   primary: '#5c5c5c',
   secodary: '#ac53f2',
   light: '#ffffff',
+  secodaryDark: '#a135f7'
 };
