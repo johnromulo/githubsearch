@@ -3,7 +3,7 @@ import { GitService } from '../../services/GitService';
 import env from '../../config';
 
 // função reponsavel por ações de chamadas de busca de usuários
-function* getUser(action) {
+export function* getUser(action) {
   try {
     yield put({ type: env.GIT_REQUEST_USER });
     const user = yield call(GitService.getUserFromServer, action.userName);
@@ -14,7 +14,7 @@ function* getUser(action) {
 }
 
 // função reponsavel por ações de chamadas de busca de repositório
-function* getUserRepos(action) {
+export function* getUserRepos(action) {
   try {
     yield put({ type: env.GIT_REQUEST_USER_REPOS });
     const repos = yield call(GitService.getUserReposFromServer, action.userName);
