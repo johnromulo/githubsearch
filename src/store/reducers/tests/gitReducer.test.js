@@ -162,9 +162,9 @@ describe("Testing Git Reducer UserRepos Actions ", async () => {
     })
   })
 
-  test('select action GIT_FAILURE_USER', () => {
+  test('select action GIT_FAILURE_USER_REPOS', () => {
     const actionRequet = {
-      type: env.GIT_FAILURE_USER,
+      type: env.GIT_FAILURE_USER_REPOS,
     }
 
     const INITIAL_STATE = {
