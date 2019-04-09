@@ -1,5 +1,25 @@
-import { gitReducer } from '../gitReducer';
+import { gitReducer, countStar, oderStar } from '../gitReducer';
 import env from '../../../config';
+
+
+describe("Testing Git Reducer DEFAUT STATE", async () => {
+
+  test('select action DEFAUT STATE', () => {
+    const INITIAL_STATE = {
+      user: {},
+      repos: [],
+      loading: false,
+      erros: false
+    }
+
+    expect(gitReducer(INITIAL_STATE, {})).toEqual({
+      user: {},
+      repos: [],
+      loading: false,
+      erros: false
+    })
+  });
+});
 
 describe("Testing Git Reducer User Actions ", async () => {
   afterEach(() => {
@@ -107,7 +127,8 @@ describe("Testing Git Reducer UserRepos Actions ", async () => {
     {
       repo: 3,
       stargazers_count: 3,
-    },]
+    }];
+
     const actionRequet = {
       type: env.GIT_SUCCESS_USER_REPOS,
       data: mockRepo
@@ -158,7 +179,43 @@ describe("Testing Git Reducer UserRepos Actions ", async () => {
       repos: [],
       loading: false,
       erros: true
-    })
-  })
+    });
+  });
 
+
+  describe("Testing Git Reducer utils functions", async () => {
+    afterEach(() => {
+      jest.clearAllMocks()
+    });
+    const mockRepo = [{
+      repo: 2,
+      stargazers_count: 2,
+    },
+    {
+      repo: 1,
+      stargazers_count: 1,
+    },
+    {
+      repo: 3,
+      stargazers_count: 3,
+    }];
+
+    test('testing countStar', () => {
+      expect(mockRepo.reduce(countStar, 0)).toBe(6);
+    });
+
+    test('testing oderStar', () => {
+      const orderRpos = mockRepo.sort(oderStar);
+
+      expect(orderRpos.length).toBe(3)
+      expect(orderRpos[0]).toEqual({
+        repo: 3,
+        stargazers_count: 3,
+      });
+      expect(orderRpos[2]).toEqual({
+        repo: 1,
+        stargazers_count: 1,
+      });
+    });
+  });
 });

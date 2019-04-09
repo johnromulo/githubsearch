@@ -30,9 +30,9 @@ export const gitReducer = (state = INITIAL_STATE, action) => {
   }
 }
 
-const countStar = (total, item) => total + item.stargazers_count;
+export const countStar = (total, item) => total + item.stargazers_count;
 
-const oderStar = (a, b) => {
+export const oderStar = (a, b) => {
   if (a.stargazers_count > b.stargazers_count) return -1;
   if (a.stargazers_count < b.stargazers_count) return 1;
   return 0;
