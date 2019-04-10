@@ -65,7 +65,6 @@ describe("fetches data from GitService", async () => {
     );
   });
 
-
   test('test getUserReposFromServer', async () => {
 
     const response = [

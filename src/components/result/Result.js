@@ -67,7 +67,7 @@ class Result extends Component {
         {
           !this.props.store.loading ?
             this.props.store.error ?
-              <NotFound text={'User not found :('}/>
+              <NotFound text={'User not found :('} />
               :
               <Content>
                 <SectionDatail>

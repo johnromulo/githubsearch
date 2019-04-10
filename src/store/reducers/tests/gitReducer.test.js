@@ -192,6 +192,10 @@ describe("Testing Git Reducer UserRepos Actions ", async () => {
       stargazers_count: 2,
     },
     {
+      repo: 4,
+      stargazers_count: 2,
+    },
+    {
       repo: 1,
       stargazers_count: 1,
     },
@@ -201,18 +205,18 @@ describe("Testing Git Reducer UserRepos Actions ", async () => {
     }];
 
     test('testing countStar', () => {
-      expect(mockRepo.reduce(countStar, 0)).toBe(6);
+      expect(mockRepo.reduce(countStar, 0)).toBe(8);
     });
 
     test('testing oderStar', () => {
       const orderRpos = mockRepo.sort(oderStar);
 
-      expect(orderRpos.length).toBe(3)
+      expect(orderRpos.length).toBe(4)
       expect(orderRpos[0]).toEqual({
         repo: 3,
         stargazers_count: 3,
       });
-      expect(orderRpos[2]).toEqual({
+      expect(orderRpos[3]).toEqual({
         repo: 1,
         stargazers_count: 1,
       });

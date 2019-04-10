@@ -21,3 +21,25 @@ describe('Home tests', () => {
   });
 });
 
+
+describe('Home tests click', () => {
+
+  const historyMock = { push: jest.fn() };
+  const wrapper = shallow(<Home history={historyMock} />);
+
+  test('render Search', () => {
+    wrapper.setState({ userName: 'john' }, () => {
+      wrapper.update();
+    });
+
+    const search = wrapper.find('Search').dive();
+    search.find('#buttonSearch').simulate('click', {
+      preventDefault: () => {
+      }
+    });
+    expect(historyMock.push.mock.calls.length).toBe(1);
+    expect(historyMock.push.mock.calls[0]).toEqual(["/john"]);
+  });
+});
+
+
